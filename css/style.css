@@ -149,9 +149,10 @@ header.scroll_header {
     color: #fff !important;
 }
 
-.btn_secondary:hover {
-    border-color: transparent;
-    background: radial-gradient(#FF95008C, #FF950000), #FF5429;
+.btn_secondary:hover,
+.btn_secondary:active {
+    border-color: transparent !important;
+    background: radial-gradient(#FF95008C, #FF950000), #FF5429 !important;
 }
 
 .btn_secondary {
