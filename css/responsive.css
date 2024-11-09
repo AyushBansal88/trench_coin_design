@@ -1,0 +1,237 @@
+@media (min-width:576px) and (max-width:1920px){
+    .container{
+        min-width: 90% !important;
+    }
+}
+
+@media(max-width:1299px){
+    .logo_circle,
+    .inner_circle,
+    .outer_circle{
+        width: 60%;
+    }
+    .impact_full_animation_div {
+        background-size: 260px;
+        background-position: 55% 100%;
+        height: 420px;
+    }
+    .impactful_img_div.top_right, .impactful_img_div.top_left {
+        top: 3%;
+    }
+    .impactful_img_div.bottom_right, .impactful_img_div.bottom_left {
+        bottom: 3%;
+    }
+}
+
+@media(max-width:1199px){
+    .border_start::before{
+        display: none;
+    }
+    .footer_card{
+        padding: 35px;
+    }
+    .banner_img_div {
+        background-size: 16% , cover !important;
+    }
+    .impactful_img_div.top_right, .impactful_img_div.bottom_right {
+        right: 6%;
+    }
+    .impactful_img_div.bottom_left, .impactful_img_div.top_left {
+        left: 6%;
+    }
+    .about_footer_card_content {
+        padding: 50px 50px 50px 0px;
+    }
+}
+
+@media(max-width:991px){
+    footer .w-max-content {
+        width: auto !important;
+    }
+    footer .border-end{
+        border: none !important;
+    }
+    .about_us_section {
+        background: none ;
+    }
+    .impactful_img_div img {
+        width: 80px;
+    }
+    .impactful_img_div::after {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .impactful_img_div.top_right::after {
+        left: -150%;
+    }
+    .impactful_img_div.bottom_right::after {
+        left: -80%;
+        bottom: 65%;
+    }
+    .impactful_img_div.bottom_left::after {
+        right: -75%;
+        bottom: 65%;
+    }
+    .about_footer_card_content {
+        padding: 45px;
+    }
+}
+
+@media(max-width:881px){
+    .logo_circle, .inner_circle, .outer_circle {
+        width: 50%;
+    }
+    .impact_full_animation_div {
+        background-size: 200px;
+        background-position: 57% 100%;
+        height: 330px;
+    }
+    .impactful_img_div img {
+        width: 55px;
+    }
+    .impactful_img_div.top_right::after {
+        left: -194%;
+    }
+    .impactful_img_div::after {
+        width: 65px !important;
+        height: 65px !important;
+    }
+    .impactful_img_div.top_right, .impactful_img_div.top_left {
+        top: 5%;
+    }
+    .impactful_img_div.top_left::after {
+        right: -94%;
+    }
+}
+
+@media(max-width:767px){
+    .globe {
+        height: 350px;
+        width: 350px;
+    }
+    .globe_cover {
+        top: 2px;
+        left: 52%;
+        width: 350px;
+    }
+    .contact_banner {
+        padding: 6rem 0 2.5rem;
+    }
+    .banner_img_div{
+        opacity: 0.6;
+
+    }
+    .banner_img_div {
+        background-size: 26% , cover !important;
+    }
+    .our_network_section {
+        padding-bottom: 15rem;
+    }
+    .impact_full_animation_div {
+        background-image: none;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .impactful_img_div{
+        position: static;
+    }
+    .circle_img_animation{
+        display: none;
+    }
+    .impact_full_animation_div{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        flex-wrap: wrap;
+    }
+    .impactful_img_div::after {
+        display: none !important;
+    }
+    .about_footer_card_content {
+        padding: 20px 35px;
+    }
+}
+
+@media(max-width:576px){
+    .globe {
+        height: 290px;
+        width: 290px;
+    }
+    .globe_cover {
+        top: 2px;
+        left: 51%;
+        width: 290px;
+    }
+    .coin_2{
+        width: 300px;
+    }
+    h1, h2 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .banner_sub_heading {
+        padding: 8px 8px;
+    }
+    .btn {
+        padding: 8px 14px;
+    }
+    .footer_ul{
+        flex-direction: column !important;
+    }
+    .contact_ul li {
+        gap: 12px;
+        font-size: 18px;
+        padding: 8px 0;
+    }
+    .contact_card {
+        padding: 12px;
+    }
+    #header{
+        padding: 0 !important; 
+    }
+    .banner_img_div {
+        background-size: 30% , cover !important;
+    }
+    .main_banner_section {
+        padding: 5rem 0px 3rem;
+    }
+    .ecosystem_coin {
+        width: 34%;
+    }
+    #counter-box .border-end{
+        border: none !important;
+    }
+    .our_network_section {
+        padding-bottom: 4rem;
+        backdrop-filter: brightness(0.4);
+    }
+    .card_type_2 {
+        padding: 10px;
+    }
+    .impactful_img_div{
+        width: 50% !important;
+    }
+    .impact_full_animation_div {
+        gap: 30px 0;
+    }
+    .innovation_coin_1,
+    .innovation_coin_2,
+    .innovation_coin_3,
+    .innovation_coin_4{
+        width: 10%;
+    }
+    @keyframes innovation_coin_animation{
+        form{
+            transform: translateY(-20px);
+        }
+        to{
+            transform: translateY(20px);
+        }
+    }
+}
+
+@media (max-width: 420px){
+    .banner_img_div {
+        background-size: 40% , cover !important;
+    }
+}
