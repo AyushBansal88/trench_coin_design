@@ -252,6 +252,14 @@
         width: 190px;
         margin-left: 25px;
     }
+    .how_does_trh_works_tabs button span {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    .how_does_trh_works_tabs button {
+        gap: 8px;
+    }
 }
 
 @media (max-width: 420px){
