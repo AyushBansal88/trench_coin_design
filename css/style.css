@@ -9,6 +9,7 @@ html{
     scrollbar-width: thin ;
     scrollbar-color: #FF9500 #d9dbe0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 ul {
