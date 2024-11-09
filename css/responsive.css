@@ -193,7 +193,7 @@
         background-size: 30% , cover !important;
     }
     .main_banner_section {
-        padding: 5rem 0px 3rem;
+        padding: 5rem 0px 2rem;
     }
     .ecosystem_coin {
         width: 34%;
@@ -227,6 +227,9 @@
         to{
             transform: translateY(20px);
         }
+    }
+    .common_section {
+        padding: 25px 0;
     }
 }
 
