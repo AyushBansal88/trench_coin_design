@@ -4,6 +4,13 @@
     }
 }
 
+@media(max-width:1399px){
+    header .nav-link {
+        font-size: 16px !important;
+        padding: 12px 0px;
+    }
+}
+
 @media(max-width:1299px){
     .logo_circle,
     .inner_circle,
@@ -74,6 +81,9 @@
     }
     .about_footer_card_content {
         padding: 45px;
+    }
+    .wgl-canvas-outer{
+        display: none !important;
     }
 }
 
@@ -193,7 +203,7 @@
         background-size: 30% , cover !important;
     }
     .main_banner_section {
-        padding: 5rem 0px 2rem;
+        padding: 8rem 0px 2rem;
     }
     .ecosystem_coin {
         width: 34%;
@@ -230,6 +240,9 @@
     }
     .common_section {
         padding: 25px 0;
+    }
+    .roadmap_section {
+        padding-bottom: 10rem !important;
     }
 }
 
