@@ -1,3 +1,6 @@
+// script for Aos animation
+AOS.init();
+
 // ================================================
 // script for header scroll Animation
 // ================================================
@@ -11,9 +14,3 @@ function header_animate() {
 var header = document.getElementById('header');
 window.addEventListener("scroll", header_animate);
 window.addEventListener("load", header_animate);
-
-// script for animation
-AOS.init();
-
-
-

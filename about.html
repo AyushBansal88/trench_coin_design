@@ -23,7 +23,7 @@
           <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <img src="images/nav_togle_img.png" alt="img" class="img-fluid" width="40">
           </button>
-          <div class="offcanvas vh-100 offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas vh-100 offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
               <a href="index.html">
                 <img src="images/logo.png" alt="img" class="img-fluid" width="200">
@@ -48,7 +48,7 @@
                   <a class="nav-link" href="#">Ecosystem</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Roadmap</a>
+                  <a class="nav-link" href="roadmap.html">Roadmap</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">FAQ</a>
@@ -130,10 +130,11 @@
     <!-- =========== secure ecosystem section end =========== -->
 
     <!-- =========== our network section =========== -->
-    <section class="our_network_section common_section">
-      <div class="container">
+    <section class="our_network_section position-relative">
+      <video src="images/earth.mp4" muted width="100%" height="100%" class="bg-black d-md-flex d-none" id="earth_vid"></video>
+      <div class="container position-absolute our_network_row">
         <div class="row justify-content-center position-relative z-1">
-          <div class="col-xl-7 col-lg-9 col-12 text-center" data-aos="fade-up" data-aos-duration="1200">
+          <div class="col-xl-7 col-lg-9 col-12 text-center">
             <h5 class="text-white fw-light">OUR NETWORK</h5>
             <h2 class="heading">
               The Trench
@@ -500,8 +501,8 @@
     <!-- =========== script for counter =========== -->
     <script>
       var a = 0;
-      $(window).scroll(function () {
-        var oTop = $("#counter-box").offset().top - window.innerHeight;
+      function counter_function(){
+        let oTop = $("#counter-box").offset().top - window.innerHeight;
         if (a == 0 && $(window).scrollTop() > oTop) {
           $(".counter").each(function () {
             var $this = $(this),
@@ -512,7 +513,7 @@
               {
                 countNum: countTo
               }, {
-              duration: 1000,
+              duration: 1400,
               easing: "swing",
               step: function () {
                 $this.text(
@@ -528,7 +529,26 @@
           });
           a = 1;
         }
+      }
+      $(window).scroll(function () {
+        counter_function();
       });
+      window.addEventListener("load", counter_function);
+    </script>
+    <script>
+      var b = 0;
+      function video_play(){
+        let oTop2 = $("#earth_vid").offset().top - window.innerHeight;
+        if (b == 0 && $(window).scrollTop() > oTop2) {
+          let video = document.getElementById('earth_vid');
+          video.play();
+          b = 1;
+        }
+      }
+      $(window).scroll(function () {
+        video_play();
+      });
+      window.addEventListener("load", video_play);
     </script>
 
   </body>

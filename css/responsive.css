@@ -1,4 +1,4 @@
-@media (min-width:576px) and (max-width:1920px){
+@media (min-width:576px) and (max-width:1799px){
     .container{
         min-width: 90% !important;
     }
@@ -160,6 +160,25 @@
     .about_footer_card_content {
         padding: 20px 35px;
     }
+    .our_network_section{
+        background: url('../images/earth_glow.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 4rem 0 7rem;
+    }
+    .our_network_row{
+        position: relative !important;
+        transform: translate(0 , 0) !important;
+        left: unset !important;
+        top: unset !important;
+    }
+    .aos-animate.roadmap_img_outer_div::before {
+        width: 75%;
+    }
+    .roadmap_img_outer_div::before {
+        left: 62%;
+    }
 }
 
 @media(max-width:576px){
@@ -260,10 +279,39 @@
     .how_does_trh_works_tabs button {
         gap: 8px;
     }
+    .roadmap_img_div img{
+        width: 24px;
+    }
+    .roadmap_img_div{
+        width: 50px;
+        height: 50px;
+        border-width: 2px !important;
+    }
+    .roadmap_img_outer_div::before {
+        height: 2px;
+        top: 55px;
+    }
+    .roadmap_img_outer_div::after {
+        width: 2px;
+    }
+    .roadmap_timeline_section h3 {
+        padding-top: 44px;
+        font-size: 18px;
+    }
+    .roadmap_timeline_section .step .card_type_3{
+        padding: 12px;
+    }
+    .roadmap_page_banner {
+        background-size: 20%,100%;
+        background-position: 18% 60% , 100% 80%;
+    }
 }
 
 @media (max-width: 420px){
     .banner_img_div {
         background-size: 40% , cover !important;
+    }
+    .roadmap_page_banner {
+        background-position:20% 60% , 100% 70%;
     }
 }

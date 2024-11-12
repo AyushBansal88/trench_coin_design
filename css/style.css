@@ -1,3 +1,4 @@
+/* ============== common css ================= */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -44,6 +45,11 @@ p {
     background: radial-gradient(at top, #ED3121, #FF9500);
 }
 
+::selection {
+    background: #fe751461;
+    color: #fff !important;
+}
+
 body {
     font-family: 'Aeonik';
     font-size: 16px;
@@ -51,13 +57,92 @@ body {
     font-weight: 300;
     background-color: #180F06;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 .common_section {
     padding: 40px 0;
 }
 
+.fs-14 {
+    font-size: 14px !important;
+}
+
+.btn {
+    border-radius: 50px;
+    border: 1px solid;
+    color: #fff;
+    background-color: transparent;
+    font-weight: 400;
+    transition: all 0.4s ease;
+    padding: 10px 20px;
+}
+
+.btn_primary {
+    border: 1px solid transparent !important;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.btn_primary::before{
+    content: '';
+    position: absolute;
+    background-color: #130502;
+    background: radial-gradient(at top, #FF95008C, #FF950000), #FF5429;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.btn_primary:hover::before{
+    width: 0%;
+}
+
+.btn_primary:hover {
+    background: transparent !important;
+    border-color: #ffffff9c !important;
+    color: #fff !important;
+}
+
+.btn_secondary:hover,
+.btn_secondary:active {
+    border-color: transparent !important;
+    color: #fff !important;
+    background: radial-gradient(#FF95008C, #FF950000), #FF5429 !important;
+}
+
+.btn_secondary {
+    border-color: #eab6775c;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    color: #fff;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.banner{
+    min-height: 100vh;
+    padding: 9rem 0;
+}
+
+.text_theme_color {
+    background: linear-gradient(to right, #ED3121, #FF9500);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* ============== common css end ================= */
+
+/* ============== header css ================= */
 header {
     position: absolute;
     top: 0;
@@ -104,70 +189,18 @@ header.scroll_header {
     backdrop-filter: blur(10px);
 }
 
-.btn {
-    border-radius: 50px;
-    border: 1px solid;
-    color: #fff;
-    background-color: transparent;
-    font-weight: 400;
-    transition: all 0.4s ease;
-}
-
-.btn_primary {
-    /* background: radial-gradient(at top, #FF95008C, #FF950000), #FF5429; */
-    border: 1px solid transparent !important;
-    position: relative;
-    border: none;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    z-index: 1;
-}
-
-.btn_primary::before{
-    content: '';
-    position: absolute;
-    background-color: #130502;
-    background: radial-gradient(at top, #FF95008C, #FF950000), #FF5429;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    transition: all 0.3s ease;
-}
-
-.btn_primary:hover::before{
-    width: 0%;
-}
-
-.btn_primary:hover {
-    background: transparent !important;
-    /* border: 1px solid #ffffff9c !important; */
-    border-color: #ffffff9c !important;
-    color: #fff !important;
-}
-
-.btn_secondary:hover,
-.btn_secondary:active {
-    border-color: transparent !important;
-    background: radial-gradient(#FF95008C, #FF950000), #FF5429 !important;
-}
-
-.btn_secondary {
-    border-color: #eab6775c;
-}
-
 #offcanvasDarkNavbar {
     width: 320px;
+    background: #150d04;
 }
+/* ============== header css end ================= */
 
+/* ============== home page css ================= */
 .banner_img_div {
     background: url('../images/banner_coin.png') ,url('../images/banner_mask.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50% , center;
-    background-size: 12% , cover;
+    background-size: 18% , cover;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -223,20 +256,6 @@ header.scroll_header {
     font-family: 'ES_Rebond_Grotesque';
 }
 
-h1,
-h2 {
-    font-weight: 600;
-    color: #fff;
-    font-size: 40px;
-    line-height: 48px;
-}
-
-.text_theme_color {
-    background: linear-gradient(to right, #ED3121, #FF9500);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .banner_sub_heading {
     position: relative;
     z-index: 2;
@@ -250,10 +269,6 @@ h2 {
 .glow_img {
     right: -32px;
     top: -33px;
-}
-
-.btn {
-    padding: 10px 20px;
 }
 
 .globe_cover {
@@ -468,7 +483,7 @@ h2 {
 
 .slider-card {
     background: transparent;
-    width: 220px;
+    width: 270px;
     height: 230px;
     margin-left: 25px;
     transition: all 0.4s ease;
@@ -534,7 +549,9 @@ h2 {
 .slider-card p {
     margin-bottom: 5px;
 }
+/* ============== home page css end ================= */
 
+/* ============== footer css ================= */
 @keyframes footer_coin_animation{
     0%{
         top: 20%;
@@ -581,10 +598,6 @@ h2 {
     gap: 8px;
 }
 
-.fs-14 {
-    font-size: 14px !important;
-}
-
 .useful_links a {
     display: flex;
     justify-content: space-between;
@@ -592,7 +605,9 @@ h2 {
     border-bottom: 1px solid;
     padding: 6px 0;
 }
+/* ============== footer css end ================= */
 
+/* ============== contact page css ================= */
 .contact_banner {
     background: url('../images/contact_page_banner_bg.png');
     background-repeat: no-repeat;
@@ -656,14 +671,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance:textfield;
+    appearance:textfield;
 }
+/* ============== contact page css end ================= */
 
-::selection {
-    background: #fe751461;
-    color: #fff !important;
-}
-
+/* ============== about page css ================= */
 .about_page_banner{
     background: url('../images/about_page_banner.png');
     background-repeat: no-repeat;
@@ -691,17 +703,11 @@ input[type=number] {
     animation: ecosystem_coin_animation 5s linear infinite;
 }
 
-.banner{
-    min-height: 100vh;
-    padding: 9rem 0;
-}
-
-.our_network_section{
-    background: url('../images/earth_glow.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 20rem;
+.our_network_row {
+    transform: translateX(-50%);
+    left: 50%;
+    top: 15%;
+    z-index: 2;
 }
 
 .about_us_section{
@@ -733,19 +739,6 @@ input[type=number] {
     justify-content: center;
     align-items: center;
 }
-
-/* @keyframes logo_animation{
-    from{
-        scale: 0.8;
-    }
-    to{
-        scale: 1.05;
-    }
-} */
-
-/* .logo_circle{
-    animation: logo_animation 2s linear infinite alternate;
-} */
 
 @keyframes rotating_circle{
     from{
@@ -894,6 +887,16 @@ input[type=number] {
     animation-delay: 3s;
 }
 
+.social_links li img{
+    transition: all 0.3s ease;
+}
+
+.social_links li:hover img{
+    scale: 1.2;
+}
+/* ============== about page css end ================= */
+
+/* ============== cursor animation css ================= */
 .wgl-canvas-outer canvas {
     position: fixed;
     top: 0;
@@ -915,10 +918,216 @@ input[type=number] {
 .wgl-canvas-outer {
     opacity: 0.5;
 }
+/* ============== cursor animation css end ================= */
 
-.social_links li img{
-    transition: all 0.3s ease;
+/* ============== roadmap page css ================= */
+.roadmap_page_banner {
+    background: url('../images/roadmap_banner_coin.png') , url('../images/roadmap_banner_img.png');
+    background-repeat: no-repeat;
+    background-size: 15%,42%;
+    background-position: 50% 50% , 100% 50%;
 }
-.social_links li:hover img{
-    scale: 1.2;
+
+.roadmap_img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 4px solid #fff;
+    background: #180F06;
+    z-index: 1;
+    margin-top: 30px;
 }
+
+.roadmap_img_outer_div{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    transform: none !important;
+}
+
+.aos-animate.roadmap_img_outer_div::after{
+    height: 100%;
+}
+
+.roadmap_img_outer_div::after{
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 4px ;
+    height: 0%;
+    transition: all 1.2s ease;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.aos-animate.roadmap_img_outer_div::before{
+    width: 105%;
+}
+
+.roadmap_img_outer_div::before{
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 0% ;
+    transition: all 1.2s ease;
+    height: 4px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 75px;
+    border-radius: 6px;
+}
+
+.roadmap_timeline_section h3{
+    padding-top: 55px;
+    position: relative;
+}
+
+.roadmap_timeline_section .step .card_type_3{
+    color: #fff;
+}
+
+.roadmap_timeline_section .step .card_inner_heading{
+    color: #FF9501;
+    font-family: 'ES_Rebond_Grotesque';
+    text-transform: uppercase;
+}
+
+.roadmap_timeline_section .step{
+    min-height: 220px;
+}
+
+.roadmap_timeline_section .step_1 .roadmap_img_div{
+    border: 4px solid #F9AE16;
+}
+
+.roadmap_timeline_section .step_1 .roadmap_img_outer_div::after{
+    background: linear-gradient(to bottom , #F9AE16,#F35520);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.roadmap_timeline_section .step_1 .roadmap_img_outer_div::before{
+    background: #F9AE16;
+}
+
+.roadmap_timeline_section .step_1 h3{
+    color: #F9AE16;
+}
+
+.roadmap_timeline_section .step_2 .roadmap_img_div{
+    border: 4px solid #F35520;
+}
+
+.roadmap_timeline_section .step_2 .roadmap_img_outer_div::after{
+    background: linear-gradient(to bottom ,#F35520,#E84345);
+}
+
+.roadmap_timeline_section .step_2 .roadmap_img_outer_div::before{
+    background: #F35520;
+}
+
+.roadmap_timeline_section .step_2 h3{
+    color: #F35520;
+}
+
+.roadmap_timeline_section .step_3 .roadmap_img_div{
+    border: 4px solid #E84345;
+}
+
+.roadmap_timeline_section .step_3 .roadmap_img_outer_div::after{
+    background: linear-gradient(to bottom , #E84345,#8D5EE6);
+}
+
+.roadmap_timeline_section .step_3 .roadmap_img_outer_div::before{
+    background: #E84345;
+}
+
+.roadmap_timeline_section .step_3 h3{
+    color: #E84345;
+}
+
+.roadmap_timeline_section .step_4 .roadmap_img_div{
+    border: 4px solid #8D5EE6;
+}
+
+.roadmap_timeline_section .step_4 .roadmap_img_outer_div::after{
+    background: linear-gradient(to bottom ,#8D5EE6, #A5208D);
+}
+
+.roadmap_timeline_section .step_4 .roadmap_img_outer_div::before{
+    background: #8D5EE6;
+}
+
+.roadmap_timeline_section .step_4 h3{
+    color: #8D5EE6;
+}
+
+.roadmap_timeline_section .step_5 .roadmap_img_div{
+    border: 4px solid #A5208D;
+}
+
+.roadmap_timeline_section .step_5 .roadmap_img_outer_div::after{
+    background: linear-gradient(to bottom , #A5208D,#46D1CE);
+}
+
+.roadmap_timeline_section .step_5 .roadmap_img_outer_div::before{
+    background: #A5208D;
+}
+
+.roadmap_timeline_section .step_5 h3{
+    color: #A5208D;
+}
+
+.roadmap_timeline_section .step_6 .roadmap_img_div{
+    border: 4px solid #46D1CE;
+}
+
+.roadmap_timeline_section .step_6 .roadmap_img_outer_div::after{
+    background: linear-gradient(to bottom , #46D1CE,#B8CA42);
+}
+
+.roadmap_timeline_section .step_6 .roadmap_img_outer_div::before{
+    background: #46D1CE;
+}
+
+.roadmap_timeline_section .step_6 h3{
+    color: #46D1CE;
+}
+
+.roadmap_timeline_section .step_7 .roadmap_img_div{
+    border: 4px solid #B8CA42;
+}
+
+.roadmap_timeline_section .step_7 .roadmap_img_outer_div::after{
+    background: #B8CA42;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.roadmap_timeline_section .step_7 .roadmap_img_outer_div::before{
+    background: #B8CA42;
+}
+
+.roadmap_timeline_section .step_7 h3{
+    color: #B8CA42;
+}
+
+.roadmap_footer_card_img_div{
+    background: url('../images/roadmap_footer_img.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.roadmap_timeline_section {
+    background: url('../images/star_bg.png');
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+/* ============== roadmap page css end ================= */
